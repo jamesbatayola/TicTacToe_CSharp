@@ -108,69 +108,73 @@ namespace TicTacToe
 
         private void OpponentTurn()
         {
+            Button button = null;
+
             // Defensive Horizonal
             if (btn1.Text == you && btn2.Text == you && btn3.Text == string.Empty)
-                btn3.Text = ai;
+                button = btn3;
             else if (btn1.Text == you && btn3.Text == you && btn2.Text == string.Empty)
-                btn2.Text = ai;
+                button = btn2;
             else if (btn2.Text == you && btn3.Text == you && btn1.Text == string.Empty)
-                btn1.Text = ai;
+                button = btn1;
 
             else if (btn4.Text == you && btn5.Text == you && btn6.Text == string.Empty)
-                btn6.Text = ai;
+                button = btn6;
             else if (btn4.Text == you && btn6.Text == you && btn5.Text == string.Empty)
-                btn5.Text = ai;
+                button = btn5;
             else if (btn5.Text == you && btn6.Text == you && btn4.Text == string.Empty)
-                btn4.Text = ai;
+                button = btn4;
 
             else if (btn7.Text == you && btn8.Text == you && btn9.Text == string.Empty)
-                btn9.Text = ai;
+                button = btn9;
             else if (btn7.Text == you && btn9.Text == you && btn8.Text == string.Empty)
-                btn8.Text = ai;
+                button = btn8;
             else if (btn8.Text == you && btn9.Text == you && btn7.Text == string.Empty)
-                btn7.Text = ai;
+                button = btn7;
 
             // Defensive Vertical
             else if (btn1.Text == you && btn4.Text == you && btn7.Text == string.Empty)
-                btn7.Text = ai;
+                button = btn7;
             else if (btn1.Text == you && btn7.Text == you && btn4.Text == string.Empty)
-                btn4.Text = ai;
+                button = btn4;
             else if (btn4.Text == you && btn7.Text == you && btn1.Text == string.Empty)
-                btn1.Text = ai;
+                button = btn1;
 
             else if (btn2.Text == you && btn5.Text == you && btn8.Text == string.Empty)
-                btn8.Text = ai;
-            else if(btn2.Text == you && btn8.Text == you && btn5.Text == string.Empty)
-                btn5.Text = ai;
-            else if(btn5.Text == you && btn8.Text == you && btn2.Text == string.Empty)
-                btn2.Text = ai;
+                button = btn8;
+            else if (btn2.Text == you && btn8.Text == you && btn5.Text == string.Empty)
+                button = btn5;
+            else if (btn5.Text == you && btn8.Text == you && btn2.Text == string.Empty)
+                button = btn2;
 
             else if (btn3.Text == you && btn6.Text == you && btn9.Text == string.Empty)
-                btn9.Text = ai;
-            else if(btn3.Text == you && btn9.Text == you && btn6.Text == string.Empty)
-                btn6.Text = ai;
-            else if(btn6.Text == you && btn9.Text == you && btn3.Text == string.Empty)
-                btn3.Text = ai;
+                button = btn9;
+            else if (btn3.Text == you && btn9.Text == you && btn6.Text == string.Empty)
+                button = btn6;
+            else if (btn6.Text == you && btn9.Text == you && btn3.Text == string.Empty)
+                button = btn3;
 
             // Defensive Cross
             else if (btn1.Text == you && btn5.Text == you && btn9.Text == string.Empty)
-                btn9.Text = ai;
-            else if(btn1.Text == you && btn9.Text == you && btn5.Text == string.Empty)
-                btn4.Text = ai;
-            else if(btn5.Text == you && btn9.Text == you && btn1.Text == string.Empty)
-                btn1.Text = ai;
+                button = btn9;
+            else if (btn1.Text == you && btn9.Text == you && btn5.Text == string.Empty)
+                button = btn4;
+            else if (btn5.Text == you && btn9.Text == you && btn1.Text == string.Empty)
+                button = btn1;
 
             else if (btn3.Text == you && btn5.Text == you && btn7.Text == string.Empty)
-                btn7.Text = ai;
-            else if(btn3.Text == you && btn7.Text == you && btn5.Text == string.Empty)
-                btn5.Text = ai;
-            else if(btn5.Text == you && btn7.Text == you && btn3.Text == string.Empty)
-                btn3.Text = ai;
+                button = btn7;
+            else if (btn3.Text == you && btn7.Text == you && btn5.Text == string.Empty)
+                button = btn5;
+            else if (btn5.Text == you && btn7.Text == you && btn3.Text == string.Empty)
+                button = btn3;
 
-            else 
+            if(button != null)
+            {
+                button.Text = ai;
+                button.Enabled = false;
+            }
 
-            aiLabel.ForeColor = Color.Black;
-            userLabel.ForeColor = Color.Red;
         }
 
         private void OpponentRandomMove()
@@ -196,8 +200,6 @@ namespace TicTacToe
                 button.Text = you;
                 button.Enabled = false;
             }
-            userLabel.ForeColor = Color.Black;
-            aiLabel.ForeColor = Color.Red
             OpponentTurn();
             CheckGame();
         }
