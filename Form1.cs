@@ -169,7 +169,6 @@ namespace TicTacToe
 
             else 
 
-
             aiLabel.ForeColor = Color.Black;
             userLabel.ForeColor = Color.Red;
         }
@@ -197,6 +196,8 @@ namespace TicTacToe
                 button.Text = you;
                 button.Enabled = false;
             }
+            userLabel.ForeColor = Color.Black;
+            aiLabel.ForeColor = Color.Red
             OpponentTurn();
             CheckGame();
         }
