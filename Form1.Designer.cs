@@ -37,11 +37,13 @@
             btn7 = new Button();
             btn8 = new Button();
             btn9 = new Button();
+            userLabel = new Label();
+            aiLabel = new Label();
             SuspendLayout();
             // 
             // btn1
             // 
-            btn1.Location = new Point(12, 12);
+            btn1.Location = new Point(10, 58);
             btn1.Name = "btn1";
             btn1.Size = new Size(107, 99);
             btn1.TabIndex = 0;
@@ -50,7 +52,7 @@
             // 
             // btn2
             // 
-            btn2.Location = new Point(125, 12);
+            btn2.Location = new Point(123, 58);
             btn2.Name = "btn2";
             btn2.Size = new Size(107, 99);
             btn2.TabIndex = 1;
@@ -59,7 +61,7 @@
             // 
             // btn3
             // 
-            btn3.Location = new Point(238, 12);
+            btn3.Location = new Point(236, 58);
             btn3.Name = "btn3";
             btn3.Size = new Size(107, 99);
             btn3.TabIndex = 2;
@@ -68,7 +70,7 @@
             // 
             // btn4
             // 
-            btn4.Location = new Point(12, 117);
+            btn4.Location = new Point(10, 163);
             btn4.Name = "btn4";
             btn4.Size = new Size(107, 99);
             btn4.TabIndex = 3;
@@ -77,7 +79,7 @@
             // 
             // btn5
             // 
-            btn5.Location = new Point(125, 117);
+            btn5.Location = new Point(123, 163);
             btn5.Name = "btn5";
             btn5.Size = new Size(107, 99);
             btn5.TabIndex = 4;
@@ -86,7 +88,7 @@
             // 
             // btn6
             // 
-            btn6.Location = new Point(238, 117);
+            btn6.Location = new Point(236, 163);
             btn6.Name = "btn6";
             btn6.Size = new Size(107, 99);
             btn6.TabIndex = 5;
@@ -95,7 +97,7 @@
             // 
             // btn7
             // 
-            btn7.Location = new Point(12, 222);
+            btn7.Location = new Point(10, 268);
             btn7.Name = "btn7";
             btn7.Size = new Size(107, 99);
             btn7.TabIndex = 6;
@@ -104,7 +106,7 @@
             // 
             // btn8
             // 
-            btn8.Location = new Point(125, 222);
+            btn8.Location = new Point(123, 268);
             btn8.Name = "btn8";
             btn8.Size = new Size(107, 99);
             btn8.TabIndex = 7;
@@ -113,19 +115,44 @@
             // 
             // btn9
             // 
-            btn9.Location = new Point(238, 222);
+            btn9.Location = new Point(236, 268);
             btn9.Name = "btn9";
             btn9.Size = new Size(107, 99);
             btn9.TabIndex = 8;
             btn9.UseVisualStyleBackColor = true;
             btn9.Click += btn9_Click;
             // 
+            // userLabel
+            // 
+            userLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            userLabel.ImageAlign = ContentAlignment.MiddleRight;
+            userLabel.Location = new Point(10, 9);
+            userLabel.Name = "userLabel";
+            userLabel.Size = new Size(107, 33);
+            userLabel.TabIndex = 9;
+            userLabel.Text = "user = ";
+            userLabel.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // aiLabel
+            // 
+            aiLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            aiLabel.ImageAlign = ContentAlignment.MiddleRight;
+            aiLabel.Location = new Point(249, 9);
+            aiLabel.Name = "aiLabel";
+            aiLabel.Size = new Size(85, 33);
+            aiLabel.TabIndex = 10;
+            aiLabel.Text = "ai =";
+            aiLabel.TextAlign = ContentAlignment.MiddleCenter;
+           
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(355, 329);
+            ClientSize = new Size(355, 375);
+            Controls.Add(aiLabel);
+            Controls.Add(userLabel);
             Controls.Add(btn9);
             Controls.Add(btn8);
             Controls.Add(btn7);
@@ -152,5 +179,7 @@
         private Button btn7;
         private Button btn8;
         private Button btn9;
+        private Label userLabel;
+        private Label aiLabel;
     }
 }

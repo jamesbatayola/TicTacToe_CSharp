@@ -13,5 +13,7 @@ namespace TicTacToe
             ApplicationConfiguration.Initialize();
             Application.Run(new Form2());
         }
+
     }
+
 }
