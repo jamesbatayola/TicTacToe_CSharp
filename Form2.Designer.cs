@@ -46,6 +46,7 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.ForeColor = SystemColors.ActiveCaptionText;
             button1.Location = new Point(32, 68);
             button1.Name = "button1";
             button1.Size = new Size(77, 68);
@@ -57,6 +58,7 @@
             // button2
             // 
             button2.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = SystemColors.ActiveCaptionText;
             button2.Location = new Point(149, 68);
             button2.Name = "button2";
             button2.Size = new Size(77, 68);

@@ -43,6 +43,8 @@
             // 
             // btn1
             // 
+            btn1.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn1.ForeColor = Color.Black;
             btn1.Location = new Point(10, 58);
             btn1.Name = "btn1";
             btn1.Size = new Size(107, 99);
@@ -52,6 +54,8 @@
             // 
             // btn2
             // 
+            btn2.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn2.ForeColor = Color.Black;
             btn2.Location = new Point(123, 58);
             btn2.Name = "btn2";
             btn2.Size = new Size(107, 99);
@@ -61,6 +65,8 @@
             // 
             // btn3
             // 
+            btn3.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn3.ForeColor = Color.Black;
             btn3.Location = new Point(236, 58);
             btn3.Name = "btn3";
             btn3.Size = new Size(107, 99);
@@ -70,6 +76,8 @@
             // 
             // btn4
             // 
+            btn4.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn4.ForeColor = Color.Black;
             btn4.Location = new Point(10, 163);
             btn4.Name = "btn4";
             btn4.Size = new Size(107, 99);
@@ -79,6 +87,8 @@
             // 
             // btn5
             // 
+            btn5.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn5.ForeColor = Color.Black;
             btn5.Location = new Point(123, 163);
             btn5.Name = "btn5";
             btn5.Size = new Size(107, 99);
@@ -88,6 +98,8 @@
             // 
             // btn6
             // 
+            btn6.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn6.ForeColor = Color.Black;
             btn6.Location = new Point(236, 163);
             btn6.Name = "btn6";
             btn6.Size = new Size(107, 99);
@@ -97,6 +109,8 @@
             // 
             // btn7
             // 
+            btn7.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn7.ForeColor = Color.Black;
             btn7.Location = new Point(10, 268);
             btn7.Name = "btn7";
             btn7.Size = new Size(107, 99);
@@ -106,6 +120,8 @@
             // 
             // btn8
             // 
+            btn8.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn8.ForeColor = Color.Black;
             btn8.Location = new Point(123, 268);
             btn8.Name = "btn8";
             btn8.Size = new Size(107, 99);
@@ -115,6 +131,8 @@
             // 
             // btn9
             // 
+            btn9.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btn9.ForeColor = Color.Black;
             btn9.Location = new Point(236, 268);
             btn9.Name = "btn9";
             btn9.Size = new Size(107, 99);
@@ -136,6 +154,7 @@
             // aiLabel
             // 
             aiLabel.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            aiLabel.ForeColor = SystemColors.ControlText;
             aiLabel.ImageAlign = ContentAlignment.MiddleRight;
             aiLabel.Location = new Point(249, 9);
             aiLabel.Name = "aiLabel";
@@ -143,7 +162,6 @@
             aiLabel.TabIndex = 10;
             aiLabel.Text = "ai =";
             aiLabel.TextAlign = ContentAlignment.MiddleCenter;
-           
             // 
             // Form1
             // 
