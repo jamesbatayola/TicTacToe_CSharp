@@ -55,6 +55,7 @@
             btn2.Size = new Size(107, 99);
             btn2.TabIndex = 1;
             btn2.UseVisualStyleBackColor = true;
+            btn2.Click += btn2_Click;
             // 
             // btn3
             // 
@@ -63,6 +64,7 @@
             btn3.Size = new Size(107, 99);
             btn3.TabIndex = 2;
             btn3.UseVisualStyleBackColor = true;
+            btn3.Click += btn3_Click;
             // 
             // btn4
             // 
@@ -71,6 +73,7 @@
             btn4.Size = new Size(107, 99);
             btn4.TabIndex = 3;
             btn4.UseVisualStyleBackColor = true;
+            btn4.Click += btn4_Click;
             // 
             // btn5
             // 
@@ -79,6 +82,7 @@
             btn5.Size = new Size(107, 99);
             btn5.TabIndex = 4;
             btn5.UseVisualStyleBackColor = true;
+            btn5.Click += btn5_Click;
             // 
             // btn6
             // 
@@ -87,6 +91,7 @@
             btn6.Size = new Size(107, 99);
             btn6.TabIndex = 5;
             btn6.UseVisualStyleBackColor = true;
+            btn6.Click += btn6_Click;
             // 
             // btn7
             // 
@@ -95,6 +100,7 @@
             btn7.Size = new Size(107, 99);
             btn7.TabIndex = 6;
             btn7.UseVisualStyleBackColor = true;
+            btn7.Click += btn7_Click;
             // 
             // btn8
             // 
@@ -103,6 +109,7 @@
             btn8.Size = new Size(107, 99);
             btn8.TabIndex = 7;
             btn8.UseVisualStyleBackColor = true;
+            btn8.Click += btn8_Click;
             // 
             // btn9
             // 
@@ -111,6 +118,7 @@
             btn9.Size = new Size(107, 99);
             btn9.TabIndex = 8;
             btn9.UseVisualStyleBackColor = true;
+            btn9.Click += btn9_Click;
             // 
             // Form1
             // 
@@ -129,7 +137,7 @@
             Controls.Add(btn1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Name = "Form1";
-            Text = "Form1";
+            Text = "TicTacToe";
             ResumeLayout(false);
         }
 
