@@ -33,32 +33,10 @@ namespace TicTacToe
             {
                 {btn1, btn2, btn3 },
                 {btn4, btn5, btn6 },
-                {btn7, btn7, btn9 }
+                {btn7, btn8, btn9 }
             };
 
         }
-
-        // Check if someone wins
-        //private bool Winner()
-        //{
-        //    bool userWins = false;
-        //    // Horizontal
-        //    if (board[0, 0] == 1 && board[0, 1] == 1 && board[0, 2] == 1)
-        //        userWins = true;
-        //    if (board[1, 0] == 1 && board[1, 1] == 1 && board[1, 2] == 1)
-        //        userWins = true;
-        //    if (board[2, 0] == 1 && board[2, 1] == 1 && board[2, 2] == 1)
-        //        userWins = true;
-        //    //Vertical
-        //    if (board[0, 0] == 1 && board[1, 0] == 1 && board[2, 0] == 1)
-        //        userWins = true;
-        //    if (board[0, 1] == 1 && board[1, 1] == 1 && board[2, 1] == 1)
-        //        userWins = true;
-        //    if (board[0, 2] == 1 && board[1, 2] == 1 && board[2, 2] == 1)
-        //        userWins = true;
-
-        //    return userWins;
-        //}
 
         private bool Winner()
         {
@@ -104,6 +82,17 @@ namespace TicTacToe
             }
             
             return isFull;
+        }
+
+        private void Reset()
+        {
+            for (int i = 0; i < buttons.GetLength(0); i++)
+                for (int j = 0; j < buttons.GetLength(1); j++)
+                {
+                    if(buttons[i, j].Text != string.Empty)
+                        buttons[i, j].Text = "";
+                    buttons[i, j].Enabled = true;
+                }
         }
 
         private void OpponentTurn()
@@ -185,9 +174,15 @@ namespace TicTacToe
         private void CheckGame()
         {
             if (Winner())
+            {
                 MessageBox.Show("Winner");
+                Reset();
+            }
             else if (IsFull())
+            {
                 MessageBox.Show("Stop");
+                Reset();
+            }
             else
                 return;
         }
@@ -260,3 +255,25 @@ namespace TicTacToe
     }
 
 }
+
+ // Check if someone wins
+        //private bool Winner()
+        //{
+        //    bool userWins = false;
+        //    // Horizontal
+        //    if (board[0, 0] == 1 && board[0, 1] == 1 && board[0, 2] == 1)
+        //        userWins = true;
+        //    if (board[1, 0] == 1 && board[1, 1] == 1 && board[1, 2] == 1)
+        //        userWins = true;
+        //    if (board[2, 0] == 1 && board[2, 1] == 1 && board[2, 2] == 1)
+        //        userWins = true;
+        //    //Vertical
+        //    if (board[0, 0] == 1 && board[1, 0] == 1 && board[2, 0] == 1)
+        //        userWins = true;
+        //    if (board[0, 1] == 1 && board[1, 1] == 1 && board[2, 1] == 1)
+        //        userWins = true;
+        //    if (board[0, 2] == 1 && board[1, 2] == 1 && board[2, 2] == 1)
+        //        userWins = true;
+
+        //    return userWins;
+        //}
