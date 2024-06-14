@@ -2,9 +2,9 @@ namespace TicTacToe
 {
     public partial class Form1 : Form
     {
-        private int[,] board = new int[3,3];
+        private int[,] board = new int[3, 3];
         private Button[,] buttons;
-        
+
         private string you;
         private string ai;
         private bool isGameOver = false;
@@ -72,7 +72,7 @@ namespace TicTacToe
             var num = new List<int>();
             for (int i = 0; i < buttons.GetLength(0); i++)
             {
-                for(int j = 0; j < buttons.GetLength(1); j++)
+                for (int j = 0; j < buttons.GetLength(1); j++)
                 {
                     if (buttons[i, j].Text != string.Empty)
                         num.Add(1);
@@ -80,7 +80,7 @@ namespace TicTacToe
                         isFull = true;
                 }
             }
-            
+
             return isFull;
         }
 
@@ -89,7 +89,7 @@ namespace TicTacToe
             for (int i = 0; i < buttons.GetLength(0); i++)
                 for (int j = 0; j < buttons.GetLength(1); j++)
                 {
-                    if(buttons[i, j].Text != string.Empty)
+                    if (buttons[i, j].Text != string.Empty)
                         buttons[i, j].Text = "";
                     buttons[i, j].Enabled = true;
                 }
@@ -158,7 +158,11 @@ namespace TicTacToe
             else if (btn5.Text == you && btn7.Text == you && btn3.Text == string.Empty)
                 button = btn3;
 
-            if(button != null)
+            // Random Move
+            else
+                OpponentRandomMove();
+
+            if (button != null)
             {
                 button.Text = ai;
                 button.Enabled = false;
@@ -168,6 +172,20 @@ namespace TicTacToe
 
         private void OpponentRandomMove()
         {
+            var random = new Random();
+            var unoccupied = new List<Button>();
+            random.Next();
+
+            for (int i = 0; i < buttons.GetLength(0); i++)
+                for (int j = 0; j < buttons.GetLength(1); j++)
+                    if (buttons[i, j].Text == string.Empty)
+                        unoccupied.Add(buttons[i, j]);
+
+            if (unoccupied.Count > 0)
+            {
+                int randomNum = random.Next(unoccupied.Count);
+                unoccupied[randomNum].Text = ai;
+            }
 
         }
 
@@ -190,7 +208,7 @@ namespace TicTacToe
         private void Click(object sender, EventArgs e)
         {
             var button = sender as Button;
-            if(button != null)
+            if (button != null)
             {
                 button.Text = you;
                 button.Enabled = false;
@@ -255,25 +273,3 @@ namespace TicTacToe
     }
 
 }
-
- // Check if someone wins
-        //private bool Winner()
-        //{
-        //    bool userWins = false;
-        //    // Horizontal
-        //    if (board[0, 0] == 1 && board[0, 1] == 1 && board[0, 2] == 1)
-        //        userWins = true;
-        //    if (board[1, 0] == 1 && board[1, 1] == 1 && board[1, 2] == 1)
-        //        userWins = true;
-        //    if (board[2, 0] == 1 && board[2, 1] == 1 && board[2, 2] == 1)
-        //        userWins = true;
-        //    //Vertical
-        //    if (board[0, 0] == 1 && board[1, 0] == 1 && board[2, 0] == 1)
-        //        userWins = true;
-        //    if (board[0, 1] == 1 && board[1, 1] == 1 && board[2, 1] == 1)
-        //        userWins = true;
-        //    if (board[0, 2] == 1 && board[1, 2] == 1 && board[2, 2] == 1)
-        //        userWins = true;
-
-        //    return userWins;
-        //}
